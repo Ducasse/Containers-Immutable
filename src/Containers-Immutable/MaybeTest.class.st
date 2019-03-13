@@ -4,7 +4,7 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MaybeTest >> testIfPresentIfAbsent [
 	| h |
 	h := Map from: { 1 -> 'one'. 2 -> 'two' }.

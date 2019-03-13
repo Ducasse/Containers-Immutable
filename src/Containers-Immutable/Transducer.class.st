@@ -15,22 +15,22 @@ Class {
 	#category : #'Containers-Immutable-Private'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #creation }
 Transducer class >> concatenating [
 	^ [ :injectBlock | [ :result :each | each inject: result into: injectBlock ] ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #creation }
 Transducer class >> filtering: filteringBlock [
 	^ [ :injectBlock | [ :result :each | (filteringBlock value: each) ifTrue: [injectBlock value: result value: each] ifFalse: [result] ] ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #creation }
 Transducer class >> identity [
 	^ [ :injectBlock | injectBlock ]
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #creation }
 Transducer class >> mapping: mappingBlock [
 	^ [ :injectBlock | [ :result :each | injectBlock value: result value: (mappingBlock value: each) ] ]
 ]

@@ -4,7 +4,7 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableQueueTest >> testBasics [
 	| q q5 q59 q593 q594 q93 q3 qEmpty |
 	q := ImmutableQueue empty.

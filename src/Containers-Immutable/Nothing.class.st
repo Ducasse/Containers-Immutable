@@ -4,12 +4,12 @@ Class {
 	#category : #'Containers-Immutable-Monads'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialize }
 Nothing class >> initialize [
 	self singletonInstance.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialize }
 Nothing class >> singletonInstance [
 	"Don't call this method, just access the global 'nothing' directly."
 	^ Smalltalk globals at: #nothing ifAbsentPut: [ self new ]

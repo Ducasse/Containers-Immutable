@@ -10,7 +10,7 @@ Class {
 	#category : #'Containers-Immutable-Monads'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 Applicative class >> pure: aValue [
 	self subclassResponsibility.
 ]

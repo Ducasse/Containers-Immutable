@@ -4,12 +4,12 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> allMapClasses [
 	^ { ArrayMap. HashMap }
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testAtPath [
 	| nestedStructure nestedStructure2 |
 	nestedStructure := HashMap from: {
@@ -42,7 +42,7 @@ MapTest >> testAtPath [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testBiggerOne [
 	self allMapClasses do: [ :mapClass |
 		| squares |
@@ -53,7 +53,7 @@ MapTest >> testBiggerOne [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testCollisions [
 	| h k1 k2 k3 |
 	k1 := ObjectWithSpecifiableHash createWithHash: 42.
@@ -68,7 +68,7 @@ MapTest >> testCollisions [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testConj [
 	self allMapClasses do: [ :mapClass |
 		| h |
@@ -79,7 +79,7 @@ MapTest >> testConj [
 	].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testEmpty [
 	self allMapClasses do: [ :mapClass |
 		| h h1 h2 h3 h3Again h4 associations2 |
@@ -120,7 +120,7 @@ MapTest >> testEmpty [
 	].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testEquals [
 	self allMapClasses do: [ :mapClass |
 		self assert: (mapClass from: { 'one' -> 1. 'two' -> 2 }) = (mapClass from: { 'two' -> 2. 'one' -> 1 }).
@@ -129,7 +129,7 @@ MapTest >> testEquals [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testIncludesKey [
 	self allMapClasses do: [ :mapClass |
 		| h |
@@ -141,14 +141,14 @@ MapTest >> testIncludesKey [
 	].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testKeys [
 	self allMapClasses do: [ :mapClass |
 		self assert: (mapClass from: { 'z' -> 1. 'y' -> 2 }) keys asArray sorted equals: { 'y'. 'z' }.
 	].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testMapValues [
 	self allMapClasses do: [ :mapClass |
 		self assert: ((mapClass from: { 'a' -> 1. 'b' -> 2. 'c' -> 3 }) mapValues: [ :v | v * v ]) equals: (Map from: { 'a' -> 1. 'b' -> 4. 'c' -> 9 }).
@@ -156,7 +156,7 @@ MapTest >> testMapValues [
 	].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testMaybeAt [
 	self allMapClasses do: [ :mapClass |
 		| h |
@@ -167,12 +167,12 @@ MapTest >> testMaybeAt [
 	].
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testMerge [
 	self assert: ((Map from: { #a -> 1. #b -> 2 }) mergeWith: (Map from: { #b -> 100. #c -> 200 }) using: [ :v1 :v2 | v1 + v2 ]) equals: (Map from: { #a -> 1. #b -> 102. #c -> 200 }).
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 MapTest >> testValues [
 	self allMapClasses do: [ :mapClass |
 		self assert: (mapClass from: { 'one' -> 1. 'two' -> 2 }) values asArray sorted = { 1. 2 }.

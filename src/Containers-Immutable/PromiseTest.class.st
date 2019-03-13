@@ -4,7 +4,7 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 PromiseTest >> testAll [
 	| p |
 	p := AsyncPromise all: {
@@ -15,7 +15,7 @@ PromiseTest >> testAll [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 PromiseTest >> testAny [
 	| allIndices rand |
 	rand := Random seed: 42. "using a fixed seed makes the results repeatable"
@@ -35,7 +35,7 @@ PromiseTest >> testAny [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 PromiseTest >> testAwait [
 	| p |
 	p := [ 3 + 4 ] go.
@@ -44,7 +44,7 @@ PromiseTest >> testAwait [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 PromiseTest >> testIsFulfilled [
 	| p |
 	p := AsyncPromise new.

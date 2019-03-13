@@ -15,12 +15,12 @@ Class {
 	#category : #'Containers-Immutable-Monads'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'instance creation' }
 Monad class >> pure: aValue [
 	^ self return: aValue
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #creating }
 Monad class >> return: aValue [
 	self subclassResponsibility.
 ]

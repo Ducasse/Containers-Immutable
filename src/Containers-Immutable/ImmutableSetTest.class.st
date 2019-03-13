@@ -4,7 +4,7 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableSetTest >> testConj [
 	| s s1 |
 	s := ImmutableSet empty conj: #argle.
@@ -14,7 +14,7 @@ ImmutableSetTest >> testConj [
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableSetTest >> testEmpty [
 	| s |
 	s := ImmutableSet empty.
@@ -22,7 +22,7 @@ ImmutableSetTest >> testEmpty [
 	self assert: s seq asArray equals: { }.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableSetTest >> testEquals [
 	self assert: (ImmutableSet containing: {}) = (ImmutableSet containing: {}).
 	self assert: (ImmutableSet containing: {1. 2. 3}) = (ImmutableSet containing: {3. 1. 2. 2. 3}).
@@ -33,7 +33,7 @@ ImmutableSetTest >> testEquals [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableSetTest >> testSeq [
 	| s |
 	s := ImmutableSet containing: { 1. 4. 3. 5. 2. 1. 4. 4. 4 }.
@@ -41,7 +41,7 @@ ImmutableSetTest >> testSeq [
 	self assert: s seq asArray sorted equals: { 1. 2. 3. 4. 5 }. 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableSetTest >> testWith [
 	| s s1 s2 |
 	s := ImmutableSet containing: { 1. 4. 3. 5. 2. 1. 4. 4. 4 }.
@@ -55,7 +55,7 @@ ImmutableSetTest >> testWith [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 ImmutableSetTest >> testWithout [
 	| s s1 s2 |
 	s := ImmutableSet containing: { 1. 4. 3. 5. 2. 1. 4. 4. 4 }.

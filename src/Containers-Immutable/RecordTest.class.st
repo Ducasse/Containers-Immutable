@@ -4,7 +4,7 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 RecordTest >> testAutoConversion [
 	| r r2 |
 	r := SillyRecord from: { #a -> 1. #b -> 2. #c -> 3 }.
@@ -13,7 +13,7 @@ RecordTest >> testAutoConversion [
 	
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 RecordTest >> testBasicStuff [
 	| r r2 r3 |
 	r := SillyRecord from: { #a -> 1. #b -> 2. #c -> 3 }.

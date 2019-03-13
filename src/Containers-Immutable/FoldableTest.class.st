@@ -4,14 +4,14 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 FoldableTest >> testBasicStuff [
 	| v |
 	v := Vector containing: (1 to: 100).
 	self assert: ((v foldable collect: #squared) select: [:n | n < 50]) asArray equals: { 1. 4. 9. 16. 25. 36. 49 }.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 FoldableTest >> testParallel [
 	| v |
 	v := Vector containing: (1 to: 1000).

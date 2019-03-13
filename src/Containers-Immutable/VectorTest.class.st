@@ -4,7 +4,7 @@ Class {
 	#category : #'Containers-Immutable-Tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testBigEnoughToNeedNodes [
 	| squares |
 	squares := Vector containing: ((1 to: 40) seq collect: [:n | n * n]).
@@ -19,7 +19,7 @@ VectorTest >> testBigEnoughToNeedNodes [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testCollect [
 	self assert: ((Vector empty, (1 to: 3)) collect: #squared) seq asArray equals: ((1 to: 3) collect: #squared) asArray.
 	self assert: ((Vector empty, (1 to: 50)) collect: #squared) seq asArray equals: ((1 to: 50) collect: #squared) asArray.
@@ -27,14 +27,14 @@ VectorTest >> testCollect [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testConcat [
 	self assert: (Vector empty, (1 to: 3) seq) seq asArray equals: (1 to: 3) asArray.
 	self assert: (Vector empty, (1 to: 3000) seq) seq asArray equals: (1 to: 3000) asArray.
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testInserting [
 	| v v12 v35 |
 	v := Vector containing: (1 to: 40) seq.
@@ -46,13 +46,13 @@ VectorTest >> testInserting [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testReducible [
 	self assert: ((Vector containing: (1 to: 1000)) foldable inject: 0 into: [ :a :b | a + b ]) equals: 500500.
 	self assert: ((Vector containing: (1 to: 1000)) foldable inject: List empty into: [ :list :elem | list cons: elem ]) asArray equals: (1 to: 1000) asArray reversed. "makes sure it goes in the right order"
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testSimpleOne [
 	| v v1 |
 	v := Vector containing: {}.
@@ -62,7 +62,7 @@ VectorTest >> testSimpleOne [
 
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #tests }
 VectorTest >> testWithoutLast [
 	| hundred ninetyNine hundredMinusNinetyEight hundredMinusNinetyNine hundredMinusHundred twoK twoKMinusOneK |
 	hundred := Vector containing: (1 to: 100) seq.

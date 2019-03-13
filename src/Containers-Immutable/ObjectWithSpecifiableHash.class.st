@@ -15,17 +15,17 @@ ObjectWithSpecifiableHash class >> createWithHash: h [
 	^ self new initializeWithHash: h
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #comparing }
 ObjectWithSpecifiableHash >> = other [
 	^ self == other
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #comparing }
 ObjectWithSpecifiableHash >> hash [
 	^ hash
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #initialization }
 ObjectWithSpecifiableHash >> initializeWithHash: h [
 	hash := h.
 ]
